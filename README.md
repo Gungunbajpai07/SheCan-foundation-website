@@ -1,10 +1,31 @@
-# She Can Foundation — Website
+She Can Foundation Website
 
-This is a lightweight, responsive, and professional website for the She Can Foundation (women empowerment NGO).
+A responsive and user-friendly website created for She Can Foundation, an NGO focused on empowering individuals through education, skill development, and community support.
 
-Project structure
+📌 Project Overview
 
-she-can-foundation/
+This website was developed as part of an internship application task. The goal was to create a clean and informative platform that introduces visitors to the foundation, its mission, and opportunities to get involved.
+
+✨ Features
+
+- Home Page with Hero Section
+- About Section
+- Volunteer / Join Us Section
+- Contact Page
+- Responsive Design
+- Image Gallery
+- Interactive Navigation
+- Clean and Professional User Interface
+
+🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+
+📂 Project Structure
+
+SheCan-foundation-website/
 │
 ├── index.html
 ├── about.html
@@ -21,64 +42,27 @@ she-can-foundation/
 │   └── script.js
 │
 ├── images/
-│   ├── hero.jpg (add a professional hero image)
-│   ├── about.jpg
-│   ├── volunteer.jpg
-│   ├── contact.jpg
 │   └── gallery/
-│       ├── photo1.jpg
-│       ├── photo2.jpg
-│       └── ...
 │
 └── README.md
 
-How to view the site locally
+🚀 How to Run
 
-- Open `index.html` in your browser (double-click or right-click -> Open with...).
-- For quick local development with live reload, you can serve the folder with a simple HTTP server, for example (Python 3):
+1. Download or clone the repository.
+2. Open the project folder.
+3. Launch "index.html" in any modern web browser.
 
-```bash
-cd "she-can-foundation"
-python -m http.server 8000
-# then open http://localhost:8000 in your browser
-```
+🎯 Purpose
 
-Images
+The purpose of this project is to demonstrate frontend web development skills while creating a simple and impactful website for a social cause.
 
-- Replace files in `images/` with real photos. Recommended sizes:
-  - `hero.jpg`: ~1600×1000 (or 1200–1800px width) optimized for web
-  - page images: 1200×800 or 800×600
-  - gallery images: 800×600 (or square crops) to keep a consistent grid
-- Use compressed JPEGs or WebP for better performance.
+👩‍💻 Developer
 
-What is included
+Gungun Bajpai
 
-- Semantic HTML5 pages: `index.html`, `about.html`, `volunteer.html`, `contact.html`.
-- Organized CSS files: global `css/style.css` and page-specific styles.
-- Plain JavaScript (no frameworks) in `js/script.js` for:
-  - mobile menu toggle
-  - back-to-top button
-  - smooth anchor scrolling
-  - simple scroll reveal animations
-  - basic client-side form validation
-- Accessibility-conscious features: clear labels, ARIA attributes, focus states.
+- Web Development Intern
+- Passionate about technology, learning, and building user-friendly web experiences.
 
-Next steps / Customization
+📜 License
 
-- Add high-quality, licensed images to `images/`.
-- Hook up forms to a backend endpoint or service (e.g., Formspree, Netlify Forms, or your server) — currently they show a simulated success message.
-- Replace placeholder social links with real accounts.
-- Adjust copy, values, and numbers to match the real NGO data.
-
-License & attribution
-
-This scaffold is provided as-is for building the She Can Foundation website. Replace placeholder content and images with your organization's real content and licensed media.
-
----
-
-If you want, I can also:
-- Add small sample images (SVG placeholders) inside `images/` so the layout looks filled during local preview.
-- Wire the forms to a sample serverless endpoint for demo purposes.
-- Create a small deploy guide for GitHub Pages or Netlify.
-
-What would you like next?
+This project was created for educational and internship application purposes.
