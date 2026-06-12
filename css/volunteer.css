@@ -1,0 +1,35 @@
+/*
+  FILE: css/volunteer.css
+  Styles specific to volunteer.html
+  - Hero section adjustments
+  - Benefits grid
+  - Signup form styling tweaks
+  - Responsive rules
+*/
+
+.vol-hero { padding: 2.5rem 0; }
+.vol-hero-inner { display:grid; grid-template-columns: 1fr 420px; gap:1.25rem; align-items:center; }
+.vol-hero-text h1 { font-size:1.9rem; margin-bottom:0.45rem; }
+.vol-hero-text .lead { color:var(--color-muted); margin-bottom:1rem; }
+.vol-hero-image img { width:100%; border-radius: var(--radius); box-shadow: 0 10px 26px rgba(91,62,150,0.06); }
+
+.why-join { padding:1.5rem 0; }
+.benefits-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:1rem; margin-top:1rem; }
+.benefit { background:#fff; padding:1rem; border-radius:10px; box-shadow: 0 8px 20px rgba(16,16,28,0.04); }
+.benefit h3 { color:var(--color-primary); margin-bottom:0.4rem; }
+.benefit p { color:var(--color-muted); }
+
+.signup { padding:1.5rem 0; }
+.volunteer-form { background: var(--color-secondary); padding:1rem; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(91,62,150,0.04); }
+.volunteer-form input, .volunteer-form textarea { background: #fff; }
+.volunteer-form .form-row { margin-bottom:0.9rem; }
+
+/* Make buttons full width on small screens for easier tapping */
+@media (max-width: 640px) {
+  .vol-hero-inner { grid-template-columns:1fr; }
+  .vol-hero-image { order:-1; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .volunteer-form .btn { width:100%; display:block; }
+}
+
+/* end of volunteer.css */

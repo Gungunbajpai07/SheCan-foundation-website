@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- about.svg: community illustration placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="t d">
+  <title id="t">About illustration</title>
+  <desc id="d">Abstract community and partnership shapes in the project's color palette.</desc>
+  <rect width="100%" height="100%" fill="#fff" />
+  <g transform="translate(60,50)">
+    <rect x="0" y="0" width="320" height="220" rx="16" fill="#EDE7F6" />
+    <rect x="360" y="60" width="420" height="240" rx="16" fill="#f9f7fb" />
+    <circle cx="200" cy="110" r="28" fill="#5B3E96" opacity="0.14" />
+    <path d="M380 220 q80 -60 160 0" stroke="#5B3E96" stroke-width="6" fill="none" opacity="0.12" stroke-linecap="round" />
+    <g transform="translate(420,120)">
+      <rect x="0" y="0" width="92" height="92" rx="12" fill="#5B3E96" opacity="0.08" />
+      <rect x="112" y="0" width="92" height="92" rx="12" fill="#5B3E96" opacity="0.14" />
+      <rect x="56" y="106" width="92" height="92" rx="12" fill="#5B3E96" opacity="0.1" />
+    </g>
+  </g>
+</svg>

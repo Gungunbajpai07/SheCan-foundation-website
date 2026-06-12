@@ -1,0 +1,235 @@
+<!doctype html>
+<!--
+  FILE: index.html
+  Main landing page for She Can Foundation
+  - Semantic structure with header, main sections, and footer
+  - Links to external CSS & JS files in the project's folders
+  - Comments explain every major section for a beginner developer
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>She Can Foundation — Empowering Women</title>
+    <!-- Link to global stylesheet (created later) -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation: sticky, simple links to page sections and pages -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <!-- Logo / NGO name -->
+        <a class="brand" href="index.html">She Can Foundation</a>
+
+        <!-- Primary navigation -->
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="btn btn-primary" href="volunteer.html">Join Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger (JS toggles .open on .nav) -->
+        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+      <!-- Hero Section: large, motivating headline with CTA and image -->
+      <section id="hero" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <!-- NGO name and inspiring tagline -->
+            <h1 class="hero-title">She Can Foundation</h1>
+            <p class="hero-tagline">Empowering women through education, skills, and opportunity.</p>
+
+            <!-- Short mission statement -->
+            <p class="hero-mission">We support women and girls to access education, build skills, and lead thriving communities.</p>
+
+            <!-- Call-to-action button linking to volunteer page -->
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="volunteer.html">Join Us</a>
+              <a class="btn btn-ghost" href="#about">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Professional hero image (replace images/hero.jpg with real photo) -->
+          <div class="hero-image">
+            <img src="images/hero.png" alt="Women learning and collaborating" />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section: brief intro, mission, vision, values -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About She Can Foundation</h2>
+          <!-- Intro paragraph -->
+          <p class="lead">She Can Foundation is a non-profit dedicated to uplifting women and girls through community-driven programs focused on education, vocational training and leadership development.</p>
+
+          <div class="about-grid">
+            <!-- Mission card -->
+            <article class="about-card">
+              <h3>Our Mission</h3>
+              <p>To empower women and girls to achieve economic independence and lead positive change.</p>
+            </article>
+
+            <!-- Vision card -->
+            <article class="about-card">
+              <h3>Our Vision</h3>
+              <p>A world where every woman has access to the tools and opportunities to thrive.</p>
+            </article>
+
+            <!-- Core values card -->
+            <article class="about-card">
+              <h3>Core Values</h3>
+              <ul>
+                <li>Integrity</li>
+                <li>Inclusivity</li>
+                <li>Respect</li>
+                <li>Impact</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Section: three cards with icon, title, description -->
+      <section id="impact" class="impact">
+        <div class="container">
+          <h2 class="section-title">Our Impact Areas</h2>
+          <p class="lead">We focus on practical programs that create measurable outcomes for women and girls.</p>
+
+          <div class="impact-grid">
+            <!-- Education card -->
+            <article class="impact-card">
+              <div class="impact-icon" aria-hidden="true">📚</div>
+              <h3>Education</h3>
+              <p>Scholarships, tutoring, and mentorship programs that keep girls in school and learning.</p>
+            </article>
+
+            <!-- Skill Development card -->
+            <article class="impact-card">
+              <div class="impact-icon" aria-hidden="true">🛠️</div>
+              <h3>Skill Development</h3>
+              <p>Vocational training and digital skills courses that build employability and entrepreneurship.</p>
+            </article>
+
+            <!-- Women Empowerment card -->
+            <article class="impact-card">
+              <div class="impact-icon" aria-hidden="true">🤝</div>
+              <h3>Women Empowerment</h3>
+              <p>Leadership programs, support groups, and community initiatives to strengthen voice and agency.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Volunteer Callout Section: reasons to join with CTA -->
+      <section id="volunteer" class="volunteer-cta">
+        <div class="container volunteer-inner">
+          <div class="volunteer-content">
+            <h2>Volunteer With Us</h2>
+            <p>Make a tangible difference by donating your time and skills. Our volunteers gain experience, community, and the satisfaction of seeing real impact.</p>
+            <ul class="benefits-list">
+              <li>Hands-on community work</li>
+              <li>Skills training and networking</li>
+              <li>Flexible volunteer opportunities</li>
+            </ul>
+            <a class="btn btn-primary" href="volunteer.html">Join Us</a>
+          </div>
+
+          <div class="volunteer-image">
+            <img src="images/volunteer.png" alt="Child participating in a She Can program" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section: responsive image grid -->
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <h2 class="section-title">Gallery</h2>
+          <p class="lead">Moments from our programs and events.</p>
+
+          <!-- Simple responsive grid; add images in images/gallery/ -->
+          <div class="gallery-grid">
+            <!-- Only showing the first two gallery images on the site; images 3-6 removed from the page but left in the images folder. -->
+            <img src="images/gallery/photo1.png" alt="Program image 1" />
+            <img src="images/gallery/photo2.png" alt="Program image 2" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section: form with Name, Email, Message, Submit -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="lead">Have questions or want to partner with us? Send a message.</p>
+
+          <!-- Contact form: validation handled by js/script.js -->
+          <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your full name" />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" autocomplete="off" rows="5" required placeholder="Write your message..."></textarea>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+            <!-- Simple form feedback area -->
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: NGO name, quick links, social placeholders, copyright -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">She Can Foundation</div>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <!-- Social placeholders -->
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+
+      <div class="container footer-legal">
+        <small>&copy; <span id="year"></span> She Can Foundation. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- Back-to-top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Link to site script (created later) -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

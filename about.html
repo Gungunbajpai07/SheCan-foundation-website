@@ -1,0 +1,175 @@
+<!doctype html>
+<!--
+  FILE: about.html
+  About page for She Can Foundation
+  - Uses semantic HTML to describe the organization
+  - Links to global and page-specific CSS
+  - Includes comments for every major section so beginners can follow
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — She Can Foundation</title>
+    <!-- Global styles and page-specific styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
+    <!-- Site header: logo, navigation, and mobile toggle -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">She Can Foundation</a>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#our-story">Our Story</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="volunteer.html" class="btn btn-primary">Join Us</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+      <!-- Top hero for the about page: subtle and professional -->
+      <section class="about-hero">
+        <div class="container about-hero-inner">
+          <div class="about-hero-text">
+            <!-- Page heading and short intro -->
+            <h1>About She Can Foundation</h1>
+            <p class="lead">We are a non-profit organisation focused on creating opportunities for women and girls through education, training, and community leadership.</p>
+          </div>
+
+          <!-- Decorative/professional image for about page; replace with your photo -->
+          <div class="about-hero-image">
+            <img src="images/about.png" alt="She Can Foundation community program" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story: background and history -->
+      <section id="our-story" class="our-story">
+        <div class="container">
+          <h2 class="section-title">Our Story</h2>
+          <!-- Paragraphs describe the organization's origin and approach -->
+          <p>Founded by a group of educators and community leaders, She Can Foundation began with a simple belief: when women are educated and supported, whole communities prosper. Our programs started as local workshops and have grown into sustained initiatives focused on long-term outcomes.</p>
+          <p>We work closely with local partners, schools, and families to design programs that respect culture and deliver measurable benefits.</p>
+        </div>
+      </section>
+
+      <!-- Mission / Vision / Values section with cards for clarity -->
+      <section id="mission" class="mission-vision">
+        <div class="container">
+          <h2 class="section-title">Mission, Vision & Values</h2>
+
+          <div class="mv-grid">
+            <!-- Mission card -->
+            <article class="mv-card">
+              <h3>Mission</h3>
+              <p>To empower women and girls to lead healthy, educated, and economically independent lives through programs that are locally-led and sustainably designed.</p>
+            </article>
+
+            <!-- Vision card -->
+            <article class="mv-card">
+              <h3>Vision</h3>
+              <p>A future where every woman and girl can access education, skills and opportunities to shape their own path.</p>
+            </article>
+
+            <!-- Values card -->
+            <article class="mv-card">
+              <h3>Core Values</h3>
+              <ul>
+                <li>Respectful partnerships</li>
+                <li>Transparency and integrity</li>
+                <li>Evidence-driven programs</li>
+                <li>Inclusivity and dignity</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact highlights: short stats or program highlights -->
+      <section class="impact-highlights">
+        <div class="container">
+          <h2 class="section-title">Impact Highlights</h2>
+          <p class="lead">Numbers tell part of our story — but behind every statistic is a life changed.</p>
+
+          <div class="highlights-grid">
+            <!-- Each highlight is presented clearly and accessibly -->
+            <div class="highlight">
+              <div class="highlight-value">1200+</div>
+              <div class="highlight-label">Girls supported through scholarships</div>
+            </div>
+
+            <div class="highlight">
+              <div class="highlight-value">800+</div>
+              <div class="highlight-label">Women trained in vocational skills</div>
+            </div>
+
+            <div class="highlight">
+              <div class="highlight-value">50+</div>
+              <div class="highlight-label">Community partnerships</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How we work: short methodology steps -->
+      <section class="how-we-work">
+        <div class="container">
+          <h2 class="section-title">How We Work</h2>
+          <ol class="work-steps">
+            <li><strong>Listen:</strong> We engage communities and stakeholders to understand needs.</li>
+            <li><strong>Design:</strong> Co-create culturally-appropriate programs with local partners.</li>
+            <li><strong>Deliver:</strong> Implement with trained staff and volunteers.</li>
+            <li><strong>Measure:</strong> Monitor outcomes and adapt for impact.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Call to action: invite to volunteer or donate -->
+      <section class="about-cta">
+        <div class="container about-cta-inner">
+          <div>
+            <h3>Get Involved</h3>
+            <p>Support our work by volunteering, partnering, or donating. Your contribution helps scale tools and programs for lasting change.</p>
+          </div>
+          <div class="about-cta-buttons">
+            <a href="volunteer.html" class="btn btn-primary">Volunteer</a>
+            <a href="contact.html" class="btn btn-ghost">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: consistent with the rest of the site -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">She Can Foundation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="container footer-legal">
+        <small>&copy; <span id="year"></span> She Can Foundation. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- Link to shared JS for interactions (mobile menu, back-to-top, year) -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

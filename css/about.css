@@ -1,0 +1,61 @@
+/*
+  FILE: css/about.css
+  Styles specific to the About page. Uses variables from css/style.css.
+  Sections:
+  - Page hero
+  - Story / content spacing
+  - Mission/Vision/Values grid tweaks
+  - Impact highlights
+  - How we work list
+  - CTA area
+  - Responsive adjustments
+*/
+
+/* Page hero: two-column layout with image */
+.about-hero { padding: 2.5rem 0; }
+.about-hero-inner { display:grid; grid-template-columns: 1fr 420px; gap:1.5rem; align-items:center; }
+.about-hero-text h1 { font-size:1.9rem; margin-bottom:0.5rem; }
+.about-hero-text .lead { margin-bottom:1rem; color:var(--color-muted); }
+.about-hero-image img { width:100%; border-radius: var(--radius); box-shadow: 0 10px 26px rgba(91,62,150,0.06); }
+
+/* Story section */
+.our-story { padding:1.25rem 0; }
+.our-story p { margin-bottom:0.8rem; color:var(--color-text); }
+
+/* Mission / Vision / Values grid */
+.mv-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; margin-top:1rem; }
+.mv-card { background: #fff; border-radius: 10px; padding:1rem 1.25rem; box-shadow: 0 8px 20px rgba(16,16,28,0.04); }
+.mv-card h3 { color:var(--color-primary); margin-bottom:0.5rem; }
+.mv-card p, .mv-card ul { color:var(--color-muted); }
+
+/* Impact highlights */
+.impact-highlights { padding:1.5rem 0; }
+.highlights-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:1rem; margin-top:1rem; }
+.highlight { background: var(--color-secondary); padding:1rem; border-radius: var(--radius); text-align:center; }
+.highlight-value { font-size:1.5rem; font-weight:700; color:var(--color-primary); margin-bottom:0.25rem; }
+.highlight-label { color:var(--color-text); }
+
+/* How we work styles */
+.how-we-work { padding:1.25rem 0; }
+.work-steps { margin-top:0.75rem; padding-left:1rem; color:var(--color-text); }
+.work-steps li { margin-bottom:0.6rem; }
+
+/* CTA area */
+.about-cta { padding:1.5rem 0; border-radius: var(--radius); background: linear-gradient(180deg, rgba(237,231,246,0.8), rgba(255,255,255,0.95)); }
+.about-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.about-cta-buttons a { margin-left:0.5rem; }
+
+/* Small responsive adjustments */
+@media (max-width: 980px) {
+  .about-hero-inner { grid-template-columns: 1fr; }
+  .about-hero-image { order: -1; }
+  .about-cta-inner { flex-direction:column; text-align:center; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .highlights-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .about-hero-text h1 { font-size:1.4rem; }
+}
+
+/* End of css/about.css */

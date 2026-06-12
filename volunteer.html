@@ -1,0 +1,135 @@
+<!doctype html>
+<!--
+  FILE: volunteer.html
+  Volunteer page for She Can Foundation
+  - Explains why to volunteer, benefits, and how to join
+  - Page-specific CSS is linked alongside global styles
+  - Comments included for clarity for beginner developers
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volunteer — She Can Foundation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/volunteer.css" />
+  </head>
+  <body>
+    <!-- Header: consistent navigation across the site -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">She Can Foundation</a>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="btn btn-primary" href="volunteer.html">Join Us</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Volunteer Hero: strong headline and brief reason to join -->
+      <section class="vol-hero">
+        <div class="container vol-hero-inner">
+          <div class="vol-hero-text">
+            <h1>Volunteer With She Can</h1>
+            <p class="lead">Contribute your time, skills, and passion to make a lasting difference in the lives of women and girls.</p>
+          </div>
+          <div class="vol-hero-image">
+            <img src="images/volunteer.png" alt="Child participating in a She Can program" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Join: clear reasons and benefits -->
+      <section class="why-join">
+        <div class="container">
+          <h2 class="section-title">Why Join Us</h2>
+          <p>Volunteering with She Can offers meaningful opportunities to learn, lead, and grow while directly helping communities.</p>
+
+          <div class="benefits-grid">
+            <div class="benefit">
+              <h3>Make Impact</h3>
+              <p>Work on tangible projects that improve education and livelihoods.</p>
+            </div>
+
+            <div class="benefit">
+              <h3>Gain Experience</h3>
+              <p>Develop professional skills through hands-on program work and training.</p>
+            </div>
+
+            <div class="benefit">
+              <h3>Community</h3>
+              <p>Join a network of passionate volunteers and local leaders.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Volunteer sign-up form: simple fields and notes about commitment -->
+      <section class="signup">
+        <div class="container">
+          <h2 class="section-title">Sign Up to Volunteer</h2>
+          <p class="lead">Tell us a bit about yourself and your interests. We will follow up with suitable opportunities.</p>
+
+          <form id="volunteerForm" class="volunteer-form" action="#" method="post" novalidate>
+            <div class="form-row">
+              <label for="vname">Full Name</label>
+              <input type="text" id="vname" name="vname" autocomplete="name" required placeholder="Your full name" />
+            </div>
+
+            <div class="form-row">
+              <label for="vemail">Email</label>
+              <input type="email" id="vemail" name="vemail" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+
+            <div class="form-row">
+              <label for="vskills">Skills / Interests</label>
+              <input type="text" id="vskills" name="vskills" autocomplete="organization-title" placeholder="E.g., teaching, event coordination" />
+            </div>
+
+            <div class="form-row">
+              <label for="vmessage">Message</label>
+              <textarea id="vmessage" name="vmessage" autocomplete="off" rows="5" placeholder="Tell us more about your availability and interests"></textarea>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+            <div id="volFormMessage" class="form-message" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: site-wide footer with links and social placeholders -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">She Can Foundation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="container footer-legal">
+        <small>&copy; <span id="year"></span> She Can Foundation. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- Shared script for interactions, form validation and mobile menu -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

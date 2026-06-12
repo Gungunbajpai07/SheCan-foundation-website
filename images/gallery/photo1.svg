@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- gallery/photo1.svg: simple neutral placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="g1 g1d">
+  <title id="g1">Gallery photo 1 placeholder</title>
+  <desc id="g1d">Neutral rectangular placeholder for gallery image.</desc>
+  <rect width="100%" height="100%" fill="#F6F4FA" />
+  <rect x="60" y="60" width="680" height="480" rx="12" fill="#EDE7F6" />
+  <g fill="#5B3E96" opacity="0.08">
+    <circle cx="200" cy="200" r="60" />
+    <circle cx="500" cy="320" r="48" />
+    <rect x="320" y="140" width="260" height="20" rx="8" />
+  </g>
+</svg>

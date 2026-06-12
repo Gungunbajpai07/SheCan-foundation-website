@@ -1,0 +1,117 @@
+<!doctype html>
+<!--
+  FILE: contact.html
+  Contact page for She Can Foundation
+  - Semantic contact form with Name, Email, Message fields
+  - Links to global and page-specific CSS
+  - Includes comments explaining each major section for beginners
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — She Can Foundation</title>
+    <!-- Global styles and contact page styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <!-- Header: consistent site navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">She Can Foundation</a>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a class="btn btn-primary" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main: contact information and form -->
+    <main>
+      <!-- Contact hero: short intro and contact details -->
+      <section class="contact-hero">
+        <div class="container contact-hero-inner">
+          <div class="contact-hero-text">
+            <h1>Contact Us</h1>
+            <p class="lead">We welcome your questions, partnership inquiries, and volunteer interest. Reach out and we'll respond promptly.</p>
+            <address class="contact-info">
+              <div><strong>Email:</strong> info@shecan.org (placeholder)</div>
+              <div><strong>Phone:</strong> +1 (555) 123-4567 (placeholder)</div>
+            </address>
+          </div>
+          <div class="contact-hero-image">
+            <img src="images/contact.png" alt="Team connecting with community" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact form: Name, Email, Message with validation (JS) -->
+      <section class="contact-form-section">
+        <div class="container">
+          <h2 class="section-title">Send Us a Message</h2>
+          <p class="lead">Use the form below for inquiries or to request more information about our programs.</p>
+
+          <!-- Form uses client-side JS in js/script.js for validation and feedback -->
+          <form id="siteContactForm" class="contact-form" action="#" method="post" novalidate>
+            <!-- Name field -->
+            <div class="form-row">
+              <label for="cname">Name</label>
+              <input type="text" id="cname" name="name" autocomplete="name" required placeholder="Your full name" />
+            </div>
+
+            <!-- Email field -->
+            <div class="form-row">
+              <label for="cemail">Email</label>
+              <input type="email" id="cemail" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+
+            <!-- Message field -->
+            <div class="form-row">
+              <label for="cmessage">Message</label>
+              <textarea id="cmessage" name="message" autocomplete="off" rows="6" required placeholder="Write your message here"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+            <!-- Feedback area updated by JS after validation/submission -->
+            <div id="contactFormMessage" class="form-message" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: consistent site footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">She Can Foundation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="container footer-legal">
+        <small>&copy; <span id="year"></span> She Can Foundation. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- Shared JS for mobile menu, form validation, year, back-to-top -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+/*
+  FILE: css/style.css
+  Global stylesheet for She Can Foundation
+
+  Sections (in order):
+  - CSS variables and Global Styles
+  - Utility classes and container
+  - Navbar
+  - Hero
+  - About / Cards
+  - Impact
+  - Gallery
+  - Forms / Contact
+  - Footer
+  - Back to top
+  - Responsive Media Queries
+
+  Comments explain major areas for beginner developers.
+*/
+
+/* ==========================
+   CSS Variables (colors, spacing, typography)
+   ========================== */
+:root {
+  /* Color palette */
+  --color-primary: #5B3E96; /* Deep Purple */
+  --color-secondary: #EDE7F6; /* Soft Lavender */
+  --color-bg: #ffffff; /* White backgrounds */
+  --color-text: #2f2f2f; /* Dark grey text */
+  --color-muted: #6b6b6b; /* Muted text */
+
+  /* Spacing and sizing */
+  --max-width: 1100px;
+  --container-padding: 1.5rem;
+  --radius: 10px; /* subtle rounded corners */
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* ==========================
+   Global Styles
+   - Base typography, box-sizing, and layout helpers
+   ========================== */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Simple container used site-wide to centre content */
+.container {
+  max-width: var(--max-width);
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+}
+
+/* Headings and section title styles */
+h1, h2, h3 { color: var(--color-primary); margin: 0 0 0.5rem 0; }
+.lead { color: var(--color-muted); margin-bottom: 1rem; }
+.section-title { font-size: 1.6rem; margin-bottom: 0.75rem; }
+
+/* Buttons: primary and ghost styles */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn:focus { outline: 3px solid rgba(91,62,150,0.15); outline-offset: 2px; }
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(91,62,150,0.08);
+}
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid rgba(91,62,150,0.12);
+}
+
+/* Small utilities */
+.text-muted { color: var(--color-muted); }
+.row { display:flex; gap:1rem; align-items:center; }
+
+/* ==========================
+   Navbar
+   - Sticky header, desktop nav, mobile toggle
+   ========================== */
+.site-header {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid #f0eef8;
+}
+.header-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0.9rem var(--container-padding);
+}
+.brand {
+  font-weight:700;
+  color:var(--color-primary);
+  text-decoration:none;
+  font-size:1.125rem;
+}
+.nav-list { list-style:none; margin:0; padding:0; display:flex; gap:1rem; align-items:center; }
+.nav-list li a { color:var(--color-text); text-decoration:none; padding:0.45rem 0.6rem; border-radius:6px; }
+.nav-list li a:hover { background: var(--color-secondary); color:var(--color-primary); }
+
+/* Mobile navigation (hidden on desktop) */
+.mobile-toggle { display:none; background:none; border:0; padding:0.4rem; cursor:pointer; }
+.hamburger { width:22px; height:2px; background:var(--color-text); display:block; position:relative; }
+.hamburger::before, .hamburger::after { content:''; position:absolute; left:0; right:0; height:2px; background:var(--color-text); }
+.hamburger::before { top:-6px; }
+.hamburger::after { top:6px; }
+
+/* Mobile nav state when opened (JS toggles .open on .nav) */
+.nav { display:block; }
+@media (max-width: 860px) {
+  .nav-list { display:none; flex-direction:column; gap:0.5rem; background:#fff; padding:1rem; border-radius:8px; box-shadow:0 8px 24px rgba(16,16,28,0.06); }
+  .nav-list.open { display:flex; }
+  .mobile-toggle { display:block; }
+}
+
+/* ==========================
+   Hero
+   - Two-column layout with text and image
+   ========================== */
+.hero { padding: 3.25rem 0; }
+.hero-inner { display:grid; grid-template-columns: 1fr 480px; gap:2rem; align-items:center; }
+.hero-title { font-size:2rem; margin-bottom:0.35rem; }
+.hero-tagline { font-size:1.125rem; color:var(--color-primary); margin-bottom:0.5rem; }
+.hero-mission { color:var(--color-muted); margin-bottom:1rem; }
+.hero-ctas { display:flex; gap:0.75rem; margin-top:0.75rem; }
+.hero-image img { width:100%; height:auto; border-radius: var(--radius); box-shadow: 0 12px 30px rgba(16,16,28,0.06); }
+
+@media (max-width: 1000px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-image { order: -1; }
+}
+
+/* ==========================
+   About / Cards
+   - Simple grid for mission/vision/values
+   ========================== */
+.about { padding: 2rem 0; }
+.about-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:1.25rem; margin-top:1rem; }
+.about-card { background:var(--color-secondary); padding:1rem; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(91,62,150,0.04); }
+.about-card h3 { margin-bottom:0.5rem; }
+.about-card ul { margin:0; padding-left:1.25rem; color:var(--color-text); }
+
+@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
+
+/* ==========================
+   Impact
+   - Cards with icon, title, description
+   ========================== */
+.impact { padding: 2rem 0; }
+.impact-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:1rem; margin-top:1rem; }
+.impact-card { background:#fff; border-radius: var(--radius); padding:1.25rem; box-shadow: 0 8px 20px rgba(16,16,28,0.04); text-align:center; }
+.impact-icon { font-size:2rem; margin-bottom:0.5rem; }
+.impact-card h3 { margin: 0.35rem 0; color:var(--color-primary); }
+.impact-card p { color:var(--color-muted); }
+
+@media (max-width: 860px) { .impact-grid { grid-template-columns: 1fr; } }
+
+/* ==========================
+   Gallery
+   - Responsive grid with simple hover effect
+   ========================== */
+.gallery { padding: 2rem 0; }
+.gallery-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:0.8rem; }
+.gallery-grid img { width:100%; height:180px; object-fit:cover; border-radius:8px; display:block; }
+.gallery-grid img:hover { transform: scale(1.02); transition: transform 180ms ease; }
+
+@media (max-width: 860px) { .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } .gallery-grid img { height:220px; } }
+
+/* ==========================
+   Forms / Contact
+   - Inputs, labels and subtle validation styles for beginner developers
++  JS will handle more complex validation
+   ========================== */
+.contact, .contact-form-section, .signup { padding: 2rem 0; }
+.contact-form, .volunteer-form { max-width:700px; margin-top:1rem; }
+.form-row { margin-bottom:0.9rem; display:flex; flex-direction:column; }
+label { margin-bottom:0.4rem; font-weight:600; }
+input[type="text"], input[type="email"], textarea { padding:0.7rem; border:1px solid #e9e6f4; border-radius:8px; font-size:1rem; color:var(--color-text); background:#fff; }
+textarea { resize:vertical; }
+input:focus, textarea:focus { outline: none; box-shadow: 0 6px 18px rgba(91,62,150,0.06); border-color: var(--color-primary); }
+.form-message { margin-top:0.5rem; color:var(--color-primary); font-weight:600; }
+
+/* ==========================
+   Footer
+   - Simple three-column layout on wide screens
+   ========================== */
+.site-footer { padding:1.25rem 0; border-top:1px solid #f3f1f8; margin-top:2rem; background: #fff; }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.footer-links { list-style:none; margin:0; padding:0; display:flex; gap:0.75rem; }
+.footer-links a { color:var(--color-muted); text-decoration:none; }
+.footer-social a { margin-left:0.5rem; color:var(--color-muted); text-decoration:none; }
+.footer-legal { margin-top:0.75rem; text-align:center; color:var(--color-muted); }
+
+@media (max-width: 720px) { .footer-inner { flex-direction:column; text-align:center; } }
+
+/* ==========================
+   Back to top button
+   - Small, unobtrusive button that appears when scrolled
+   ========================== */
+#backToTop { position:fixed; right:1rem; bottom:1rem; background:var(--color-primary); color:#fff; border:0; padding:0.5rem 0.6rem; border-radius:10px; display:none; cursor:pointer; box-shadow:0 8px 20px rgba(91,62,150,0.12); }
+#backToTop.show { display:block; }
+
+/* ==========================
+   Small reveal helpers for scroll animations
+   - JS can toggle the .reveal.active classes to animate
+   ========================== */
+.reveal { opacity:0; transform: translateY(10px); transition: opacity 460ms ease, transform 460ms ease; }
+.reveal.active { opacity:1; transform: none; }
+
+/* ==========================
+   Responsive Media Queries
+   - Ensure layout adapts to smaller devices
+   ========================== */
+@media (max-width: 1000px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size:1.5rem; }
+  .hero { padding: 2rem 0; }
+}
+
+/* End of css/style.css */
